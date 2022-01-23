@@ -1,0 +1,169 @@
+/*disco-typewriter font import;
+font-family: dico-typewriter-slab, mono;
+font-weight: 400;
+font-style: normal;*/
+@import url("https://use.typekit.net/rft6mnt.css");
+
+
+
+/*oswald font import;
+font-family: 'Oswald', sans-serif;
+font-weight: 400, 500, semi-bold 600; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-image: url("images/background-image.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.parallax {
+    background-image: url("images/background-image.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 2vw;
+    padding: 1em;   
+}
+
+/*------blue box rules-----*/
+.container {
+    min-height: 50vh;
+    background-color: #06ebd8;
+    width: 50%;
+    margin: 20vh auto;
+}
+
+/*rules of the description boxes*/
+.description {
+    margin: 20vh auto;
+    padding: 1em;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/*----------------BREAKPOINTS ---------*/
+/*smaller than 865 px the font is this size for these elements/classes----*/
+@media only screen and (max-width: 800px) {
+    .title {
+        font-size:2.5em;
+    }
+
+    p, ul, h2 {
+        font-size: 1.2em;
+    }
+}
+ /*larger than 866px font changes to this size*/
+@media only screen and (min-width: 801px){
+    .title {
+        font-size: 4em;
+    }
+
+    p, ul, h2 {
+        font-size: 2em;
+    }
+}
+
+/*---------change the sizing/design for mobile phones---*/
+ @media only screen and (max-width: 620px){
+     .description, .container, .list {
+         width: 100%;
+
+     }
+ }
+
+
+
+
+/*----rules for decoration for various text-----*/
+p {
+    padding: .8em;
+    font-family: dico-typewriter-slab, mono;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: dico-typewriter-slab, mono;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+ul {
+    text-align: left;
+    font-family: dico-typewriter-slab, mono;
+    font-weight: 400;
+    font-style: normal;
+    flex-grow: 1;
+}
+
+/*---rules for titles of description boxes*/
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px #06ebd8;
+}
+
+
+
+/*-----------------------------------rules for navigation----*/
+
+.nav-item {    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: rgb(240, 240, 13);
+    padding: 10px; 
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+}
+
+.nav-item:hover{
+    color: #06ebd8;
+    
+}
+
+/*-------RESPONSIVE ELEMENTS for navigation----------*/
+/*smaller than # px the nav menu displays with flex*/
+@media only screen and (max-width: 800px){
+    .nav-item {
+        display:flex;
+        flex-flow:   wrap;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        font-size: 1.5em;
+    }
+    
+}
+/*larger than # px the nav menu goes to inline--*/
+@media (min-width: 801px){
+    .nav-item {
+        display:inline;
+        font-size: 2em;
+        
+    }
+}
+
