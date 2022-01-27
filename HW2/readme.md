@@ -1,4 +1,4 @@
-##Week 2
+## Week 2
 
 This week I felt pretty confident in using the console.log(), let's hope I did the homework right. 
 I read through chapter one of the Eloquent JavaScript book and I remebered some of what I was reading from 
