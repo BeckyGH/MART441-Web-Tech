@@ -14,8 +14,8 @@ afraid of expressing her truth on a canvas.`);
 console.log(`Edvard Munch-He was all about breaking the (then) rules of painting what is seen to what is felt. He was willing and wanted to explore deeper within himself, 
 using his paintings as relfections of expressive emotions.`);
 //Wassily Kadinsky---------------why was he culturally important?-
-console.log(`Wassily Kadinsky-Kandisky was coined as a more "spiritual painter", which wasn't well regarded or usual during his time. He combined his knowledge of psychology 
-and color symbolism to create expressive colorful painting of shape and form that hadn't really been explored before. Definetly an influential artists in 
-helping to create the world of abstract art.`)
+console.log(`Wassily Kadinsky-Kandisky was coined as a more "spiritual painter", which wasn't well regarded or usual during his time. He influenced the way people 
+thought about painting by combining his knowledge of psychology and color symbolism to create expressive colorful paintings of shape and form that hadn't really been explored before. 
+Definetly an influential artists in helping to create the world of abstract art.`)
 
 
