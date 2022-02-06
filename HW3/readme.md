@@ -1,3 +1,0 @@
-## week 3
-
-The week did present itself with quite a few learning curves, not only in this class but with my others also. It was diffucult for me in the beginning of this assignment. I read through all the material, check out a couple of videos even, and read Chapter 2 of the textbook(even re-read it) but for some reason for two days I was having a hard time wrapping my head around how I needed to do things to get them to work. Really it seems silly now because it finally clicked, guess I needed more time to digest and process it all.  Anyhow, looking forward to keep going and am feeling satisfied that I finally got to where I needed to be. 
