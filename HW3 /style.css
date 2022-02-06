@@ -1,0 +1,137 @@
+@import url("https://use.typekit.net/rft6mnt.css");
+@import url("https://use.typekit.net/bik2lom.css");
+
+/*------------font refrence for tomarik import from adobe
+Tomarik Display Shadow
+font-family: tomarik-display-shadow, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Tomarik Display
+font-family: tomarik-display, sans-serif;
+font-weight: 400;
+font-style: normal;
+Tomarik Display Line Shadow
+
+font-family: tomarik-display-line-shadow, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+* {
+    box-sizing: border-box; 
+}
+
+
+body {
+   
+    background-color: rgb(146, 194, 149);
+    align-content: center;
+}
+
+/*------button decorating ----------*/
+.buttonContainer{
+    margin: auto;
+    width: 30%;
+    max-width:80%;
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px 3px rgb(10, 58, 58);
+    display: grid;
+    gap: 5px;
+}
+
+button{
+    width: 100%;
+    height: auto;
+    font-family: tomarik-display-shadow, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 1px 1px rgb(63, 62, 62);
+    background-color: brown;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(241, 178, 59);  
+}
+
+button:hover {
+    border-color: darkgreen;
+    color: rgb(247, 218, 165);
+   
+}
+
+/*------------description decorating-------------*/
+#description {
+    font-family: dico-typewriter-slab, mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    margin: 3em;
+    text-align: center;
+
+}
+
+/*------------heading decorating----------*/
+h1 {
+    font-family: tomarik-display-shadow, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color:rgb(243, 209, 13);
+    font-size: 3.5em;
+    text-shadow: 1px 1px rgb(63, 62, 62);
+}
+
+
+img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 3em;
+    box-shadow: 0 10px 10px 5px rgb(10, 58, 58);
+    ;
+    background-color:rgb(46, 122, 122);
+   
+}
+
+footer {
+    font-family: dico-typewriter-slab, mono;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center ;
+    font-size: .8em;
+    /*background-color: deeppink;---to help me see better */
+    margin: auto;
+    padding: 4em;
+}
+    
+
+/*---when browser size is less than these px these changes will occur 
+scaling down of font sizes*/
+@media only screen and (max-width: 821px){
+    #description {
+       font-size: 1em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+   button {
+       width: 100%;
+       font-size: 1em;
+   }
+}
+
+/*scaling down of img when screen gets bigger these px---wanted it to be a bit smaller % for desktop ---*/
+@media only screen and (min-width: 821px) {
+    img {
+        width: 50%;
+        height: auto;
+    }
+    
+}
+
+
