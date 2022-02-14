@@ -4,11 +4,11 @@
 function myHeadache (param1) 
 {
    
-    document.write('<h1>Career Options</h1>');
+    document.write('<h1>Career Path</h1>');
     return param1 ;
 }
 
-let val = myHeadache('Career Options');
+let val = myHeadache('Career Path');
 // print to check if accurate 
 console.log(val);
 
