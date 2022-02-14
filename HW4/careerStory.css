@@ -1,0 +1,147 @@
+@import url("https://use.typekit.net/sqh0exc.css");
+@import url("https://use.typekit.net/bik2lom.css");
+
+/*------------font refrence for tomarik import from adobe
+Tomarik Display Shadow
+font-family: tomarik-display-shadow, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Tomarik Display
+font-family: tomarik-display, sans-serif;
+font-weight: 400;
+font-style: normal;
+Tomarik Display Line Shadow
+
+font-family: tomarik-display-line-shadow, sans-serif;
+font-weight: 400;
+font-style: normal; 
+--------------FONT FOLK----REGULAR AND ROUGH-------------
+font-family: ff-folk, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: ff-folk-rough, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+
+  * {
+    box-sizing: border-box; 
+}
+
+
+body {
+    background-color: rgb(140, 194, 71);
+}
+
+/*--------------HEADER styling------*/
+h1{
+    font-family: ff-folk, sans-serif;
+    font-style: normal; 
+    text-align: center;
+    font-size: 3.5em;
+    margin: 2em;
+}
+
+/*------------------IMAGEs--------*/
+#storyImage {
+    border: 8px solid black;/*----to help me see*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    background-color: rgb(99, 33, 126);
+}
+
+/*-----------QUESTIONS--or text portion-----------*/
+#questions {
+    font-family: monospace, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*border: 1px solid black;--------again to help me see when designing*/
+    margin: 1.5em;
+    text-align: center;
+    font-size: 2em;
+    
+
+}
+
+/*-------------BUTTONS---------------------*/
+.btnStyle {
+    height: 200px;
+    position: relative;
+  
+}
+
+ button {
+    width: 300px;
+    height: auto;
+    font-family: ff-folk, sans-serif;
+    font-style: normal; 
+    text-align: center;
+     font-size: 1.2em;
+     letter-spacing: 0.1em;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    background-color: rgb(7, 92, 141);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(241, 178, 59); 
+    /*margin-left: auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    margin-bottom:4em;*/
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+     box-shadow: 0 0 10px rgb(47, 15, 59);
+}
+
+button:hover {
+    border-color: rgb(255, 255, 255);
+    color: rgb(247, 218, 165);
+   
+}
+
+input {
+    width: 50%;
+    height: 50px;
+    font-family: monospace, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 1em;
+    /* found this on W3schools to align input and button */
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*---when browser size is less than these px these changes will occur */
+@media only screen and (max-width: 821px){
+    input {
+       font-size: .7em;
+       width: 40%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+   button {
+       font-size: 1em;
+       width: 40%;
+   }
+
+   #questions{
+       font-size: 1em;  
+   }
+}
+
+
+

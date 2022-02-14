@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <!DOCTYPE html>
+
+<html lang="en-US">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="a choose your own career path story">
+        <meta name="author" content="Becky GH">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Into the Future</title>
+        
+        <link rel="stylesheet" href="careerStory.css">
+        
+        <script src="careerStory.js">
+          
+            myHeadache ();
+  
+          </script>
+</head>
+
+<body>
+    <div id="param1"></div>
+
+    <div>
+        <img src="./images/thinker.png" id="storyImage">
+    </div>
+        
+    <div id="questions">
+            <div>
+                <p>
+                <br>
+                You have just graduated college and now things are getting real. 
+                <br>
+                You have to make a decision of what career you want to pursue.
+                <br>
+                You've narrowed it down to Ceramist or Animator, what will it be?
+                <br>
+                </p>
+            </div>
+    </div>
+       
+  
+        <!------career button option-->
+<div class="btnStyle">
+               
+                <input type="text"  id="careerChoice" value="Please enter Ceramist or Animator" autofocus>
+                <button id="btnSubmit" onclick="career('see if this works');">Click to continue</button>
+   
+
+        <!--- project or museum choice buttons-->
+   
+        <input type="text"  id="projectChoice" value="Enter Mugs or Sculpture" style="display:none" autofocus>
+         <button id="btnSubmit2" onclick= "project();"  style="display:none">Continue</button>
+
+    
+
+<!-------animator buttons-->
+  
+        <input type="text" id="companyChoice" value="Enter Disney or Playstation"  style="display:none" autofocus>
+        <button id="btnSubmit4" onclick="company();" style="display:none">continue</button>
+  
+
+  
+        <input type="text" id="museumChoice" value="Enter MOMA or Chicago"  style="display:none"autofocus>
+        <button id="btnSubmit3" onclick="museum();" style="display:none">Continue</button>
+ 
+
+ 
+        
+        <input type="text" id="donationChoice" value="Enter Yes or No"  style="display:none" autofocus>
+        <button id="btnSubmit5" onclick="donation();" style="display:none">Continue</button>
+
+
+   
+        <input type="text" id="restartChoice" value="Yes"  style="display:none">
+        <button id="restartButton" onclick="restart();" style="display:none">Restart</button>&nbsp;
+   
+</div>
+<!-------
+        <input type="text" size="30" id="restartChoice" value="Please enter Ceramist or Animator"  style="display:none">
+        <button id="btnSubmit06" onclick="restart();" style="display:none">Continue</button>
+--->
+
+
+      
+
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,5 @@
+## week 3
+
+Well let's just say I don't want to repeat this week again! I almost gave up completely, but I just decided to give up on trying to figure out how to incorporate a loop into my work, so I didn't meet that objective of the assignment. I understand the concept of them but for some reason wasn't able to, after many attempts, to get one into my script/JS this week. I spent numerous hours (25+, honestly) working on this assignment and still think I could use more time with the JS and CSS parts. 
+
+I'm struggling with the application of the material. I read the material and do the exercises/examples using the class materials/code academy, even look up more, and I do well with then and feel I get the concepts and understand but then when I try and apply my knowledge it gets all kinds of well...insert bad words here :)! Just need more practice, I guess. Anyhow another week of frustration in the books. 
