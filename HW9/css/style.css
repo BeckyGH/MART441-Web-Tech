@@ -1,0 +1,109 @@
+/*
+font-family: bd-jupiter-stencil,sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: bd-jupiter,sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: neuzeit-grotesk, sans-serif;
+font-weight: 700;
+font-style: normal;
+*/
+
+body{
+    background-color: #f8d404;
+}
+/*--------------------DATA INFO(HEADER)-----------------*/
+#mainTitle {
+    font-family: bd-jupiter,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 3em;
+}
+
+#dataInfo{
+    text-align: center;
+    margin: 2em;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  
+  
+}   
+/*-------------TABLE---------------*/
+@media screen and (min-width: 414px) {
+    #table {
+        width: 30%;
+        height: auto;
+    }
+}
+
+#table {
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 3px solid rgb(16, 104, 204);
+    display: none;
+    width: 50%;
+    height: auto;
+    
+}
+
+td {
+    background-color: #529c0d;
+    width: 100px;
+    font-family: bd-jupiter,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    padding: 5px;
+
+   
+}
+th {
+    background-color: #ffffff;
+    font-family: bd-jupiter-stencil,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    padding: 10px;
+}
+
+th, td {
+
+    border: 1px solid  rgb(16, 104, 204);
+
+    text-align: center;
+}
+
+/*------------BUTTON--------------*/
+#btnStyle {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#btnSubmit {
+    font-family: neuzeit-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: rgb(16, 104, 204);
+    color: white;
+}
+/*----------------IMAGE-----------*/
+#worldPic {
+  
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 50px;
+     /*box-shadow: 0 0 10px #000000;*/
+
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    
+ <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="getting Json file using Jquery-AJAX ">
+        <meta name="author" content="Becky GH">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Intro to jQuery-Making art</title>
+           
+                <link rel="stylesheet" type="text/css" href="./css/style.css">  
+                <!--adobe font-->
+                <link rel="stylesheet" href="https://use.typekit.net/iki3rcb.css">
+                <!---CDN for animate.css library-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+             
+</head>
+
+
+<body>
+   
+    <h1 id="mainTitle">Global Temperature Anomalies</h1>
+ 
+    <div id="dataInfo"></div>
+            <div> <img src="./images/world.png" id="worldPic" class="animate__animated animate__flipInY"> </div>
+       
+            <table id="table" class="animate__animated animate__fadeInUp">
+                    <tr>
+                        <th>Year</th>
+                        <th>Degrees</th>
+                    </tr>
+            </table>
+  
+        <div id="btnStyle">
+            <button id ="btnSubmit">Get Data</button>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/scripts/main.js"></script> 
+  
+</body>
+</html>
