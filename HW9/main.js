@@ -15,7 +15,7 @@
 
 }(jQuery));
 */
-		
+--allow-file-access-from-files
 //animate.css duration change of animation
 const element = document.querySelector('#worldPic');
 element.style.setProperty('--animate-duration', '2.5s');

@@ -1,0 +1,30 @@
+#myCanvas {
+  
+    border: 10px solid rgb(73, 224, 73);
+    /*object-fit: contain;*/
+}
+
+#canvasBox{
+    border: 15px solid rgb(175, 8, 193);
+    width: 820px;
+    height: 620px;
+    display: none;  
+}
+
+/*this is div box*/
+ #audio {
+     margin: 25px;
+     text-align:left;
+     
+  
+ }
+/*--this is button*/
+ #audiochange {
+     font-size: 1em;
+     border-radius: 1em;
+     background-color: black;
+     color: white;
+     padding: 15px;
+     
+ }
+
