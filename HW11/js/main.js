@@ -131,7 +131,7 @@ function moveRect()
         movement *= -1;
         console.log("movement");
     }
-    square2.setX(square2.theX + movement);
+        square2.setX(square2.theX + movement);
       
     if (square2.theY <=0 || square2.theY >= 500)
         {
@@ -142,7 +142,10 @@ function moveRect()
    
         //square2.setY(Math.floor(Math.random()* 10) * movement_;
         //console.log("movement");
-    
+    if(square1.theX > 700 || square1.theX <10 && square1.theY > 500 || square1.theY < 10)
+    {
+
+    }
 }
 
 
@@ -151,26 +154,29 @@ function getKey(event)
 {
   
     let didCollide = hasCollided(square1, square2);
-    console.log("did collide" + didCollide);
+    //console.log("did collide" + didCollide);
     if(!didCollide)
     {
-
-            if(event.keyCode == '38')
-                {
-                    moveUp();
-                }
-            else if(event.keyCode == '40')
-                {
-                    moveDown();
-                }
-            else if(event.keyCode == '39')
-                {
-                    moveRight();
-                }
-            else if(event.keyCode == '37')
-                {
-                    moveLeft();
-                }
+        if(event.keyCode == 39 && square1.theX < 780) 
+        {
+            ///move right
+            square1.setX(square1.theX + 10);
+        } 
+        else if(event.keyCode == 37 && square1.theX > 0) 
+        {
+            //move left
+            square1.setX(square1.theX -10);
+        } 
+        else if(event.keyCode == 38 && square1.theY > 0) 
+        {
+            ///move up
+            square1.setY(square1.theY - 10);
+        } //uppåt pil
+        else if(event.keyCode == 40 && square1.theY < 580) 
+        {
+           //move down
+            square1.setY(square1.theY + 10);
+        }
 
     }
     else 
@@ -181,23 +187,6 @@ function getKey(event)
     drawSquare();
 }
 
-function moveUp()
-{
-    square1.setY(square1.theY - 10);
-}
-
-function moveDown()
-{
-    square1.setY(square1.theY + 10);
-}
-function moveLeft()
-{
-    square1.setX(square1.theX -10);
-}
-function moveRight()
-{
-    square1.setX(square1.theX + 10);
-}
 
 /*-------->>>>>>>>>>CHANGES in colors/size for rect and background---------*/
 function changes()
