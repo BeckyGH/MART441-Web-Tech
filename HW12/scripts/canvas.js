@@ -270,7 +270,7 @@ function rectCollision()
     //--------test2 false 
    let collision2 = false;
   
-   console.log(rectArray.length);
+   //console.log(rectArray.length);
    for(var r = 0; r < rectArray.length; r++)
    {
 
@@ -282,7 +282,7 @@ function rectCollision()
                break;
            }
    }
-   console.log(rectArray.length);
+   //console.log(rectArray.length);
 }
 
 
@@ -304,42 +304,3 @@ function hasCollided(object1, object2) {
         (object1.xAxis > (object2.xAxis + object2.width))
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*if(test2 || collision2)
-   {
-       
-       //collection++;
-       if(direction == "left")
-       {
-           moveRight();
-           //player.setX(player.theX+=10);
-       }
-       else if(direction == "right")
-       {
-           moveLeft();
-           //player.setX(player.theX-=10);
-       }
-       else if(direction == "up")
-       {
-           moveDown();
-           //player.setY(player.theY +=10);
-       }
-       else if(direction == "down")
-       {
-           moveUp();
-           //player.setY(player.theY-=10);
-       }       
-   }
-*/
