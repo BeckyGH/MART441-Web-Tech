@@ -111,7 +111,7 @@ function createShapes()
      firstRect = new Shapes(10, 575, 60, 10, "purple", 1);
 
     // start of jquery
-    $.getJSON("/data/firstSquares.json", function(data) {
+    $.getJSON("./data/firstSquares.json", function(data) {
         for(let i = 0; i < data.squares.length; i++)
         {
          squareArray.push(new Shapes(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
@@ -119,7 +119,7 @@ function createShapes()
         drawShapes();
     });   
     
-    $.getJSON("/data/secondRect.json", function(data) {
+    $.getJSON("./data/secondRect.json", function(data) {
         for(let i = 0; i < data.rect.length; i++)
         {
             rectArray.push(new Shapes(data.rect[i].x,data.rect[i].y, data.rect[i].h, data.rect[i].w, data.rect[i].color));
