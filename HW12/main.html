@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Beck Canvas</title>
+    </head>
+
+    <style>
+        #myCanvas{
+            border:10px solid darkslategray;
+            background-color: lightgray;
+            display: inline;    
+        }
+        #canvas-container{
+            width: 100%;
+            text-align: center;
+           
+        }
+        h1{
+            text-align: center;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:orangered;
+        }
+        body{
+            background-color:blanchedalmond;
+        }
+    </style>
+    <body>
+        <div>
+            <h1>
+                Collect all the rectangles to win! 
+            </h1>
+        </div>
+        <div id="canvas-container">
+        <canvas id="myCanvas" height="600" width="800"></canvas>
+            </div>
+     
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       
+        <script src="scripts/canvas.js"></script>
+       
+    </body>
+</html>
