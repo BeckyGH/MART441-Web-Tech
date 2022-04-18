@@ -111,7 +111,7 @@ function createShapes()
      firstRect = new Shapes(10, 575, 60, 10, "purple", 1);
 
     // start of jquery
-    $.getJSON("/data/firstSquares.json", function(data) {
+    $.getJSON("./data/firstSquares.json", function(data) {
         for(let i = 0; i < data.squares.length; i++)
         {
          squareArray.push(new Shapes(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
@@ -119,7 +119,7 @@ function createShapes()
         drawShapes();
     });   
     
-    $.getJSON("/data/secondRect.json", function(data) {
+    $.getJSON("./data/secondRect.json", function(data) {
         for(let i = 0; i < data.rect.length; i++)
         {
             rectArray.push(new Shapes(data.rect[i].x,data.rect[i].y, data.rect[i].h, data.rect[i].w, data.rect[i].color));
@@ -270,7 +270,7 @@ function rectCollision()
     //--------test2 false 
    let collision2 = false;
   
-   console.log(rectArray.length);
+   //console.log(rectArray.length);
    for(var r = 0; r < rectArray.length; r++)
    {
 
@@ -282,7 +282,7 @@ function rectCollision()
                break;
            }
    }
-   console.log(rectArray.length);
+   //console.log(rectArray.length);
 }
 
 
@@ -304,42 +304,3 @@ function hasCollided(object1, object2) {
         (object1.xAxis > (object2.xAxis + object2.width))
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*if(test2 || collision2)
-   {
-       
-       //collection++;
-       if(direction == "left")
-       {
-           moveRight();
-           //player.setX(player.theX+=10);
-       }
-       else if(direction == "right")
-       {
-           moveLeft();
-           //player.setX(player.theX-=10);
-       }
-       else if(direction == "up")
-       {
-           moveDown();
-           //player.setY(player.theY +=10);
-       }
-       else if(direction == "down")
-       {
-           moveUp();
-           //player.setY(player.theY-=10);
-       }       
-   }
-*/
