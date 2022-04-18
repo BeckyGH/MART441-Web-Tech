@@ -1,0 +1,2 @@
+Making this game was not the easiest for me, I struggled with implementing many of the elements. I was successfull with some but not with others. I put a lot of energy into trying to make multiple scenes/levels and for it to restart but did not succeed this time. 
+I know I met the objectives of the assignment but I really would have liked it to feel more complete with those elements. Although I'm submitting the assignment as it is now I think I will come back to it after leaving it alone for awhile and see if I can figure it out. 
