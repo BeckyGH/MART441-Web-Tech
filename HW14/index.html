@@ -23,7 +23,7 @@
             height: 100%;
             display: block;
             /*adding background*/
-            background: url(/images/geometric.jpg) no-repeat center center;
+            background: url('./images/geometric.jpg') no-repeat center center;
             background-size: cover;
             z-index: -1;
             
@@ -50,10 +50,16 @@
 
 <!--using example from three.js CDN and import to create canvas/scene-->
     <script type="module">
+       
         //import { OBJLoader } from './someFolder/examples/jsm/loaders/OBJLoader.js';
         import { GLTFLoader } from './someFolder/examples/jsm/loaders/GLTFLoader.js';
         import { MTLLoader } from './someFolder/examples/jsm/loaders/MTLLoader.js';
+   
         import { OrbitControls } from './someFolder/examples/jsm/controls/OrbitControls.js';
+        //import { GLTFLoader } from 'https://github.com/Montana-Media-Arts/441-WebTech-Spring2022-Examples/blob/main/Week%2014/Homework%2014/libs/GLTFLoader.js';
+        //import { GLTFLoader } from 'https://github.com/BeckyGH/MART441-Web-Tech/blob/main/someFolder/examples/jsm/loaders/GLTFLoader.js';
+       // import { MTLLoader } from 'https://github.com/BeckyGH/MART441-Web-Tech/blob/main/someFolder/examples/jsm/loaders/MTLLoader.js';
+        //import { OrbitControls } from 'https://github.com/BeckyGH/MART441-Web-Tech/blob/main/someFolder/examples/jsm/controls/OrbitControls.js';
         import * as THREE from 'three';
 
 function main() 
@@ -235,7 +241,7 @@ function main()
             //animate();      
  }
 
-        main();
+ main();
 
     </script>
 
