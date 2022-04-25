@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My first three.js </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+           
+        
+        }
+
+        #c {
+            width: 100%;
+            height: 100%;
+            display: block;
+            /*adding background*/
+            background: url(/images/geometric.jpg) no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            
+        }
+    
+    </style>
+
+</head>
+
+
+<body>
+   
+    <canvas id="c"></canvas>
+   
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./someFolder/build/three.module.js"
+        }
+    }
+</script>
+
+<!--using example from three.js CDN and import to create canvas/scene-->
+    <script type="module">
+        //import { OBJLoader } from './someFolder/examples/jsm/loaders/OBJLoader.js';
+        import { GLTFLoader } from './someFolder/examples/jsm/loaders/GLTFLoader.js';
+        import { MTLLoader } from './someFolder/examples/jsm/loaders/MTLLoader.js';
+        import { OrbitControls } from './someFolder/examples/jsm/controls/OrbitControls.js';
+        import * as THREE from 'three';
+
+function main() 
+{
+            const canvas = document.querySelector('#c');
+        
+            const renderer = new THREE.WebGLRenderer({
+                //need to add in image background
+                canvas,
+                alpha: true,
+            });
+            //change far to 100
+            const camera = new THREE.PerspectiveCamera(75, 2, .1, 100);
+            //set position z to "zoom in out" camera 
+            camera.position.z = 10;
+            //this add in controls 
+            const controls = new OrbitControls(camera, canvas);
+           
+            //can change these controls x, y, z
+            controls.target.set(0, 0, 0);
+            //controls.target.set(0, 5, 0);
+            controls.update();
+
+            //adding scene
+            const scene = new THREE.Scene();
+
+            {
+                const color = 'white';
+                const intensity = 2;
+                const light = new THREE.DirectionalLight(color, intensity);
+                light.position.set(-1, 2, 4);
+                scene.add(light);
+                const light2 = new THREE.PointLight(color, intensity);
+                light2.position.set(75, 8, 1);
+                scene.add(light2);
+            }
+           /**
+            * downloaded from Sketchfab 
+          "Paper Clip Collection .glb FREE Low Poly" (https://skfb.ly/o6wvY) by LordSamueliSolo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            **/
+            const loader = new GLTFLoader();
+            const myObj = './models/PaperClipCollection.glb';
+            //const myObj = './models/cat.glb';
+            
+
+            //loading the object into scene
+            loader.load(myObj, (gltf) => 
+            {
+           
+              const root = gltf.scene;
+              //root.rotation.x = 1;
+              root.position.x = 4;
+              root.position.y = -2;
+              root.position.z = -35;
+             
+              root.rotation.y = 2;  
+              root.rotation.x = 0; 
+              scene.add(root);
+              //requestAnimationFrame( animate );
+              //console.log(dumpObject(root).join('\n'));
+              
+            });
+            function animate()
+                    {
+                        requestAnimationFrame( animate );
+                        //root.rotation.x += 0.01;
+                        myObj.rotateX += 0.01;
+                        renderer.render( scene, camera ); 
+                    }
+        
+           /*myObj.position.set(new THREE.Vector3(5, 0, 0));
+           let matrix = new THREE.Matrix4();
+           matrix.makeRotationY(Math.PI/2);
+           myObj.position.applyMatrix4(matrix);*/
+
+            //start of shapes boxes first  
+            const boxWidth = 1;
+            const boxHeight = 1;
+            const boxDepth = 1;
+            const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+            function makeInstance(geometry, color, x) {
+                const material = new THREE.MeshPhongMaterial({ color });
+
+                const cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+
+                cube.position.x = x;
+                return cube;
+            }
+            //making instances of the shapes
+            const cubes = [
+                makeInstance(geometry, 'blue', -1),
+                makeInstance(geometry, 'green', -3),
+                makeInstance(geometry, 'purple', 1),
+                makeInstance(geometry, 'orange', 3),
+            ];
+
+            //start of flat "circles"--could use segments to make different shapes 
+            const radius = .5;  // radius--how big 
+            const segments = 40;  // how many segments--could make different shapes with this 
+            const geometry2 = new THREE.CircleGeometry(radius, segments);
+
+            function makeInstance2(geometry2, color, x, y) {
+                const material2 = new THREE.MeshPhongMaterial({ color });
+
+                const circle = new THREE.Mesh(geometry2, material2);
+                scene.add(circle);
+
+                circle.position.y = y;
+                //circle.position.x = x;
+
+
+                return circle;
+            }
+            //using array to create multiple objects
+            const circles = [
+                makeInstance2(geometry2, 'white', 1, -3),
+                makeInstance2(geometry2, 'green', 1, -1),
+                makeInstance2(geometry2, 'orange', 1, 1),
+                makeInstance2(geometry2, 'purple', 1, 3),
+            ];
+            
+            //
+            function resizeRendererToDisplaySize(renderer) {
+                const canvas = renderer.domElement;
+                const pixelRatio = window.devicePixelRatio;
+                const width = canvas.clientWidth * pixelRatio | 0;
+                const height = canvas.clientHeight * pixelRatio | 0;
+                const needResize = canvas.width !== width || canvas.height !== height;
+                if (needResize) {
+                    renderer.setSize(width, height, false);
+                }
+         
+                return needResize;
+            }
+            ///rendering the scene and rotating objects
+            function render(time)
+                {
+                    time *= 0.001;  // convert time to seconds
+                    const canvas = renderer.domElement;
+                   
+                    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                    camera.updateProjectionMatrix();
+
+                    if (resizeRendererToDisplaySize(renderer)) 
+                    {
+                        const canvas = renderer.domElement;
+                        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                        camera.updateProjectionMatrix();
+                    }
+                    //each cube rotation-used from three.js example
+                    cubes.forEach((cube, ndx) => 
+                    {
+                        const speed = 1 + ndx * .5;
+                        const rot = time * speed;
+                        cube.rotation.x = rot;
+                        //cube.rotation.y = rot;---only spinning on x with this commented out
+                     
+                    });
+                    circles.forEach((circle, ndx) => 
+                    {
+                        const speed = 1 + ndx * .2;
+                        const rot = time * speed;
+                        circle.rotation.x = rot;
+                        circle.rotation.y = rot;//only spinning on x with this commented out
+                     
+                    });
+                
+                    renderer.render(scene, camera);
+             
+                    requestAnimationFrame(render);
+                    //requestAnimationFrame(animate);
+                    //animate();
+                } 
+           
+            requestAnimationFrame(render);
+            //requestAnimationFrame(animate);
+            //animate();      
+ }
+
+        main();
+
+    </script>
+
+    
+</body>
+
+</html>
