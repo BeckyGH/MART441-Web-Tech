@@ -221,7 +221,7 @@ function collectBubble(player, bubble)
         //  A new batch to collect
         fruits.children.iterate(function (child) {
 
-        child.enableBody(true, child.y, 0, true, true);
+        child.enableBody(true, child.x, 0, true, true);
 
         });
     }
