@@ -1,0 +1,46 @@
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="creating with jquery">
+   <meta name="author" content="Becky GH">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Nodejs</title>
+   <style>
+      body {
+         background-color: rgb(145, 169, 12);
+      }
+   </style>
+
+   <script src="client.js"></script>
+   <script src="server.js"></script>
+</head>
+
+<body>
+   <h1>
+      Please Submit Your Information
+   </h1>
+
+   <form action="index2.html" method="GET" id="form">
+
+      <label>First Name</label><br>
+      <input type="text" name="firstName" id="firstName" placeholder="Enter Name" value=""><br><br>
+
+
+      <label>Last Name</label><br>
+      <input type="text" id="lastName" name="lastName" placeholder="Enter Name" value=""><br><br>
+
+
+      <input type="submit" value="Submit" id="button" onsubmit="onSubmit();"></input>
+
+
+   </form>
+
+
+   <p id="results"></p>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+
+</html>

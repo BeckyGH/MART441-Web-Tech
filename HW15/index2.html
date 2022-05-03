@@ -1,0 +1,36 @@
+<html>
+
+<head>
+   <title>Node.js</title>
+   <style>
+      body {
+         background-color: rgb(223, 223, 223);
+      }
+   </style>
+   <script>
+      function refreshPage() {
+         const params = new URLSearchParams(window.location.search)
+         var fName = params.get("firstName");
+         var lName = params.get("lastName");
+         var refresh = params.has("norefresh");
+         let str = fName + '<br>' + lName;
+         if (!refresh) {
+            window.location = "index2.html?firstName=" + fName + "&lastName=" + lName + "&norefresh=1";
+         }
+         document.getElementById('endResults').innerHTML = str;
+      }
+   </script>
+</head>
+
+<body onload="refreshPage();onSubmit();">
+   <h1>
+      Welcome!
+   </h1>
+
+   <span>Grant Williams</span>
+   <div id="endResults"></div>
+
+
+</body>
+
+</html>
