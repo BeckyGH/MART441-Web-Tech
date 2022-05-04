@@ -3,16 +3,26 @@
 <head>
    <title>Node.js</title>
    <style>
+      
       body {
-         background-color: rgb(223, 223, 223);
+         background-color: rgb(145, 169, 12);
+         text-align: left;
+         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         
       }
+ 
+     #endResults{
+       
+        color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+     }
    </style>
    <script>
       function refreshPage() {
          const params = new URLSearchParams(window.location.search)
-         var fName = params.get("firstName");
-         var lName = params.get("lastName");
-         var refresh = params.has("norefresh");
+         var fName = params.get('firstName');
+         var lName = params.get('lastName');
+         var refresh = params.has('norefresh');
          let str = fName + '<br>' + lName;
          if (!refresh) {
             window.location = "index2.html?firstName=" + fName + "&lastName=" + lName + "&norefresh=1";
@@ -22,12 +32,12 @@
    </script>
 </head>
 
-<body onload="refreshPage();onSubmit();">
+<body onload="refreshPage();">
    <h1>
-      Welcome!
+      Welcome to your Info page!
    </h1>
 
-   <span>suppose to change....??</span>
+   <span>suppose to change</span>
    <div id="endResults"></div>
 
 
