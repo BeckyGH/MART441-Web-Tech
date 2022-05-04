@@ -25,35 +25,36 @@ let callback = function (response)
 
 //this where I would put the readerStream---- to do the file stuff?????
 
-  response.on('end', function () {
+  response.on('end', function () 
+  {
                 
-    var stream = fs.createReadStream('index.html',
-    {
-      
-      flags: 'r',
-      encoding: 'utf8',
-      method: 'GET'
-      headers: 
+      var stream = fs.createReadStream('index.html',
       {
-         form: '',
-          id:''
-          value:''
-      }
+
+        flags: 'r',
+        encoding: 'utf8',
+        method: 'GET'
+        headers: 
+        {
+           form: '',
+            id:''
+            value:''
+        }
+      });
+
+      var writerStream = fs.createWriteStream('output.txt',
+      {
+        flags: 'w',
+        encoding: 'utf8',
+
+      });
+      // Pipe the read and write operations
+      stream.pipe(writerStream);
+
+      //console.log(JSON.parse(body));
+      console.log("piping Ended");
     });
-    
-    var writerStream = fs.createWriteStream('output.txt',
-    {
-      flags: 'w',
-      encoding: 'utf8',
-  
-    });
-    // Pipe the read and write operations
-    stream.pipe(writerStream);
-   
-    //console.log(JSON.parse(body));
-    console.log("piping Ended");
-  });
-}
+ }
 // Make a request to the server
 let req = http.request(options, callback);
 req.end();
