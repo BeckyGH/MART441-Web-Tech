@@ -2,7 +2,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="description" content="nodejs">
+   <meta name="description" content="creating with jquery">
    <meta name="author" content="Becky GH">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,7 +10,25 @@
    <style>
       body {
          background-color: rgb(145, 169, 12);
+         text-align: left;
+         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         
       }
+     #form {
+        color: rgb(113, 2, 108);
+        font-size: 1.5em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+     }
+     #button {
+        font-size: 1em;
+        background-color: black;
+        color: white;
+        border: 5px solid white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+     }
+     input{
+        background-color: black;
+     }
    </style>
 
    <script src="client.js"></script>
@@ -32,13 +50,17 @@
       <input type="text" id="lastName" name="lastName" placeholder="Enter Name" value=""><br><br>
 
 
-      <input type="submit" value="Submit" id="button" onsubmit="onSubmit();"></input>
+      <input type="submit" value="Submit" id="button" onsubmit=""></input>
 
 
    </form>
 
+
+   <p id="results"></p>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 
 </html>
+
+
