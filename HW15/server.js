@@ -30,7 +30,6 @@ http.createServer(function (request, response) {
                 console.log("Parsed Query:", parsedObject);
                 
                 // Use the parse() method on the string
-                // with sep as `&&` and eq as `-`
                 urlQuery = 
                 "firstName-&&lastName-";
                 queryObject = querystring.parse(urlQuery, "&&", "-");
@@ -56,7 +55,7 @@ http.createServer(function (request, response) {
          // Write the content of the file to response body
          response.write(data.toString());
       }
-        // check to see if we are on the second page or not
+        // check to see if second page or not
            if(pathname == "index2.html")
            {
               readQueryString(queryObject);
