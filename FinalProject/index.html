@@ -17,7 +17,7 @@
 			height: 100%;
 			display: block;
 			/*adding background*/
-			background: url('/images/dark-sky.jpg') repeat center center;
+			background: url('./images/dark-sky.jpg') repeat center center;
 			background-size: cover;
 			z-index: 1;
 
@@ -70,19 +70,16 @@
 		import { RectAreaLightUniformsLib } from './someFolder/lights/RectAreaLightUniformsLib.js';
 
 		///ideas that FLOPPED :(
-		//import { OrbitControls } from '/someFolder/jsm/controls/OrbitControls.js';
 		//import { RoundedBoxGeometry} from '/someFolder/jsm/geometries/RoundedBoxGeometry.js';
 		//import { FontLoader } from '/someFolder/jsm/loaders/FontLoader.js';
 		//import { TextGeometry } from '/someFolder/jsm/geometries/TextGeometry.js';
 		//import { GLTFLoader } from '/someFolder/jsm/loaders/GLTFLoader.js';
 		//import { MTLLoader } from '/someFolder/jsm/loaders/MTLLoader.js';
-		
 		//import { OutlineEffect } from '/someFolder/effects/OutlineEffect.js';--this would have been cool if I had gotten it to work!!!!
 
 		let scene, renderer, clock, camera;
 		let time = 2;
 		let stats;
-		//const objects = [];
 
 		//lines
 		let line;
@@ -95,8 +92,6 @@
 		//texture
 		let texture;
 		let boxText;
-		
-		
 		
 		////>>>>>>>>>>>>>>>>?>>>>>>>>>>>>>BEGINNING OF METHODS---INIT FIRST>>>>>>>>>>>>>>>>>>>?>>>>>>>>>>>>
 
@@ -132,10 +127,6 @@
 			dirLight.position.set(0,5, 5);
 			dirLight.castShadow = true;
 			dirLight.shadowCameraVisible = true;
-			//dirLight.shadow.mapSize.width = 256;
-			//dirLight.shadow.mapSize.height = 256;
-			//dirLight.shadow.camera.near = 0.5;
-			//dirLight.shadow.camera.far = 15;
 			dirLight.shadow.mapSize.width = 256;
 			dirLight.shadow.mapSize.height = 100;
 			dirLight.shadow.camera.near = 1;
@@ -213,7 +204,7 @@
 		/////----------------------RECTANGLE/BOXES---------------------
 		function createBoxes()
 		{
-				let boxText = new THREE.TextureLoader().load( '/someFolder/textures/colors.png' );
+				let boxText = new THREE.TextureLoader().load( './someFolder/textures/colors.png' );
 				let boxGeo = new THREE.BoxGeometry(1, 10, 1);
 
 				function makeInstance(boxGeo,  x, y, z) 
@@ -318,7 +309,7 @@
 		//-------------------CONE-------------
 		function createCones()
 		{
-			texture = new THREE.TextureLoader().load( "/someFolder/textures/brick_bump.jpg" );
+			texture = new THREE.TextureLoader().load( "./someFolder/textures/brick_bump.jpg" );
 			const cone = new THREE.Mesh(
 				new THREE.ConeGeometry(2, 20, 15),
 				new THREE.MeshLambertMaterial({
@@ -329,10 +320,11 @@
 				specular: 0xffaa00,
 				shininess: 2,
 				map: texture
-			}));
-			cone.position.x = 0
-			cone.position.z = 0;
-			scene.add(cone);
+				}));
+			
+				cone.position.x = 0
+				cone.position.z = 0;
+				scene.add(cone);
 			//want to make clones of the original---using .clone from examples
 			let c = 0, newCone, radius, x2, z2;
 			while (c < 4) {
